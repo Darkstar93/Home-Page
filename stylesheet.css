@@ -1,0 +1,294 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	margin: 0;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	line-height: 1.0em;
+	align-items: center;
+}
+#site_wrap {
+	display: grid;
+	grid-template-columns: 1fr repeat(4, minmax(0, 272px)) 1fr;
+	grid-gap: 0px;
+	grid-template-rows: 104px 237px 336px 530px 336px 153px;
+	grid-template-areas: "header header header header header header" "second_header second_header second_header second_header second_header second_header" ". Info Info Info Pic ." ". photos photos photos photos ." ". footer footer footer footer .";
+	background-image: url("file:///Macintosh HD/Users/Thomas/Documents/SLCC/Web Design/Turek_Working_Home_Page/CSS Wireframe 4/Images/background_pic.jpg");
+	background-repeat: no-repeat;
+}
+.header {
+	background-color: #0F467A;
+	grid-area: header;
+	color: white;
+	font-size: 30px;
+	text-align: right;
+	padding: 10px;
+	padding-right: 20px;
+	margin: 0px;
+	height: 70px;
+}
+nav {
+	padding-top: 12px;
+	width: 100vw;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-around;
+}
+li {
+	position: relative;
+	padding: 0 20px;
+	height: 100%;
+	display: flex;
+}
+a {
+	z-index: 1;
+	color: white;
+	text-decoration: none;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	font-size: 24px;
+	padding: 5px 5px;
+}
+a::before {
+	position: absolute;
+	content: "";
+	height: 33.33%;
+	width: 0;
+	background-color: #0D7CFF;
+	bottom: 66.66%;
+	left: 0;
+	transition: all 0.5s;
+}
+li::before {
+	content: "";
+	position: absolute;
+	height: 33.33%;
+	width: 0;
+	background-color: #0D7CFF;
+	right: 0;
+	z-index: 0;
+	top: 33.33%;
+	transition: all 0.5s;
+}
+li::after {
+	content: "";
+	position: absolute;
+	height: 33.33%;
+	width: 0;
+	background-color: #0D7CFF;
+	left: 0;
+	z-index: 0;
+	bottom: 0;
+	transition: all 0.5s;
+}
+li:hover:before, li:hover::after, li:hover a::before {
+	width: 100%;
+}
+.second_header {
+	background-color: #B7DAFB;
+	grid-area: second_header;
+	width: 50%;
+	height: 70%;
+	border-radius: 30px;
+	background-image: url("Images/presidio.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-top: 5zpx;
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 35px;
+	color: white;
+	vertical-align: bottom;
+	line-height: 90px;
+}
+.Info {
+	background-color: rgba(255, 255, 255, .7);
+	, 0.7);
+	grid-area: Info;
+	font-size: 35px;
+	letter-spacing: 1.0px;
+	line-height: 1.0;
+	padding: 25px;
+	border-radius: 35px;
+}
+.Pic {
+	width: 200px;
+	height: 500px;
+	grid-area: Pic;
+}
+.headpic {
+	width: 100%;
+	grid-area: Pic;
+	border-radius: 30px;
+	padding: 15px;
+}
+.photos {
+	margin-top: 50px;
+	padding-top: 300px;
+	background-color: #B7DAFB;
+	grid-area: photos;
+	padding: 20px;
+	text-align: center;
+	color: white;
+	font-size: 50px;
+	padding-top: 25px;
+}
+.grid {
+	padding: 20px;
+	padding-top: 30px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-gap: 10px;
+	align-items: stretch;
+}
+.grid img {
+	border: 1px solid #ccc;
+	box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+	max-width: 100%;
+}
+.footer {
+	background-color: #0F467A;
+	grid-area: footer;
+	width: 100%;
+	height: 25px;
+	bottom: 0;
+	left: 0;
+	font-size: 24px;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 25px;
+	color: white;
+	line-height: 1.3;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
+}
+.div {
+	display: block;
+}
+.aboutinfo {
+	background-color: white;
+	grid-area: Info;
+	font-size: 35px;
+	letter-spacing: 1.0px;
+	line-height: 1.0;
+	padding: 25px;
+}
+.aboutpic {
+	margin: 0;
+	height: 100%;
+	border-radius: 30px;
+}
+.photos2 {
+	background-color: #B7DAFB;
+	grid-area: photos;
+	padding: 20px;
+	text-align: center;
+	color: white;
+	font-size: 50px;
+	padding-top: 25px;
+	align-content: center;
+}
+.iframe {
+	grid-area: second_header;
+	position: absolute;
+	margin: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.fbvid {
+	grid-area: second_header;
+	width: 50%;
+	height: 70%;
+	border-radius: 30px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-top: 25zpx;
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 35px;
+	color: white;
+	vertical-align: bottom;
+	line-height: 90px;
+}
+.homestext {
+	text-align: center;
+	font-size: 24px;
+	line-height: 1.3;
+}
+.grid2 {
+	padding: 20px;
+	padding-top: 100px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(15%, 1fr));
+	grid-gap: 35px;
+	align-items: center;
+	max-width: 100%;
+}
+.grid2 img {
+	border: 1px solid #ccc;
+	box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+	max-width: 100%;
+	display: inline-block;
+}
+.team1 img:hover {
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+	transition: 1s ease;
+}
+.teampic img:hover {
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+	transition: 1s ease;
+}
+.revvtext {
+	text-align: center;
+	color: black;
+	margin: 0;
+	line-height: 1.1;
+	padding-top: 20px;
+}
+.teamheader {
+	max-width: 75%;
+	align-content: center;
+	padding: 12px;
+}
+.teamheader img:hover {
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+	transition: 1s ease;
+}
+.teamheader img:hover {
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+	transition: 1s ease;
+}
+#videobg {
+	position: fixed;
+	z-index: -1;
+}
+.contacts {
+	text-align: center;
+	line-height: 1.3;
+}
